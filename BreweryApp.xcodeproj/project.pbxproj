@@ -12,9 +12,12 @@
 		73734E842BB73E0200B080D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734E832BB73E0200B080D2 /* ViewController.swift */; };
 		73734E892BB73E0300B080D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73734E882BB73E0300B080D2 /* Assets.xcassets */; };
 		73734E8C2BB73E0300B080D2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 73734E8B2BB73E0300B080D2 /* Base */; };
+		8A26059CCDE8F540D00B3AED /* Pods_BreweryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98769571F2258F37F994F423 /* Pods_BreweryApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54B611FF474A046F50D5742F /* Pods-BreweryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreweryApp.debug.xcconfig"; path = "Target Support Files/Pods-BreweryApp/Pods-BreweryApp.debug.xcconfig"; sourceTree = "<group>"; };
+		555D512797E614D7C8EAF07D /* Pods-BreweryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreweryApp.release.xcconfig"; path = "Target Support Files/Pods-BreweryApp/Pods-BreweryApp.release.xcconfig"; sourceTree = "<group>"; };
 		73734E7C2BB73E0200B080D2 /* BreweryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreweryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73734E7F2BB73E0200B080D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73734E812BB73E0200B080D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		73734E882BB73E0300B080D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73734E8B2BB73E0300B080D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73734E8D2BB73E0300B080D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98769571F2258F37F994F423 /* Pods_BreweryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreweryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A26059CCDE8F540D00B3AED /* Pods_BreweryApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				73734E7E2BB73E0200B080D2 /* BreweryApp */,
 				73734E7D2BB73E0200B080D2 /* Products */,
+				ECE0113CB4E2114065701F40 /* Pods */,
+				91534E0B915A0837696E6AAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +119,24 @@
 			path = Configs;
 			sourceTree = "<group>";
 		};
+		91534E0B915A0837696E6AAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98769571F2258F37F994F423 /* Pods_BreweryApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECE0113CB4E2114065701F40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54B611FF474A046F50D5742F /* Pods-BreweryApp.debug.xcconfig */,
+				555D512797E614D7C8EAF07D /* Pods-BreweryApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73734E902BB73E0300B080D2 /* Build configuration list for PBXNativeTarget "BreweryApp" */;
 			buildPhases = (
+				26F1EB2565B94EC77E34F29D /* [CP] Check Pods Manifest.lock */,
 				73734E782BB73E0200B080D2 /* Sources */,
 				73734E792BB73E0200B080D2 /* Frameworks */,
 				73734E7A2BB73E0200B080D2 /* Resources */,
+				BD039EC235FB6059345BA909 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +203,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26F1EB2565B94EC77E34F29D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BreweryApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD039EC235FB6059345BA909 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BreweryApp/Pods-BreweryApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BreweryApp/Pods-BreweryApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BreweryApp/Pods-BreweryApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		73734E782BB73E0200B080D2 /* Sources */ = {
@@ -323,6 +392,7 @@
 		};
 		73734E912BB73E0300B080D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54B611FF474A046F50D5742F /* Pods-BreweryApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -354,6 +424,7 @@
 		};
 		73734E922BB73E0300B080D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 555D512797E614D7C8EAF07D /* Pods-BreweryApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
