@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		73734E802BB73E0200B080D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734E7F2BB73E0200B080D2 /* AppDelegate.swift */; };
 		73734E822BB73E0200B080D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734E812BB73E0200B080D2 /* SceneDelegate.swift */; };
-		73734E842BB73E0200B080D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734E832BB73E0200B080D2 /* ViewController.swift */; };
+		73734E842BB73E0200B080D2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734E832BB73E0200B080D2 /* MainViewController.swift */; };
 		73734E892BB73E0300B080D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73734E882BB73E0300B080D2 /* Assets.xcassets */; };
 		73734E8C2BB73E0300B080D2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 73734E8B2BB73E0300B080D2 /* Base */; };
+		73734E9B2BB97A5900B080D2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734E9A2BB97A5900B080D2 /* Coordinator.swift */; };
+		73734E9D2BB97AE600B080D2 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734E9C2BB97AE600B080D2 /* BaseCoordinator.swift */; };
+		73734E9F2BB97B6A00B080D2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734E9E2BB97B6A00B080D2 /* AppCoordinator.swift */; };
+		73734EA22BB97D0C00B080D2 /* MainViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734EA12BB97D0C00B080D2 /* MainViewControllerCoordinator.swift */; };
 		8A26059CCDE8F540D00B3AED /* Pods_BreweryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98769571F2258F37F994F423 /* Pods_BreweryApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,10 +25,14 @@
 		73734E7C2BB73E0200B080D2 /* BreweryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreweryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73734E7F2BB73E0200B080D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73734E812BB73E0200B080D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		73734E832BB73E0200B080D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		73734E832BB73E0200B080D2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		73734E882BB73E0300B080D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73734E8B2BB73E0300B080D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73734E8D2BB73E0300B080D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73734E9A2BB97A5900B080D2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		73734E9C2BB97AE600B080D2 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		73734E9E2BB97B6A00B080D2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		73734EA12BB97D0C00B080D2 /* MainViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerCoordinator.swift; sourceTree = "<group>"; };
 		98769571F2258F37F994F423 /* Pods_BreweryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreweryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +78,7 @@
 		73734E932BB73F1E00B080D2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				73734E992BB9614E00B080D2 /* CoordinatorCore */,
 				73734E952BB73F2B00B080D2 /* App */,
 				73734E962BB73F2F00B080D2 /* Scenes */,
 			);
@@ -98,7 +107,7 @@
 		73734E962BB73F2F00B080D2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				73734E832BB73E0200B080D2 /* ViewController.swift */,
+				73734EA02BB97CB200B080D2 /* Main */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -117,6 +126,25 @@
 				73734E8D2BB73E0300B080D2 /* Info.plist */,
 			);
 			path = Configs;
+			sourceTree = "<group>";
+		};
+		73734E992BB9614E00B080D2 /* CoordinatorCore */ = {
+			isa = PBXGroup;
+			children = (
+				73734E9A2BB97A5900B080D2 /* Coordinator.swift */,
+				73734E9C2BB97AE600B080D2 /* BaseCoordinator.swift */,
+				73734E9E2BB97B6A00B080D2 /* AppCoordinator.swift */,
+			);
+			path = CoordinatorCore;
+			sourceTree = "<group>";
+		};
+		73734EA02BB97CB200B080D2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				73734E832BB73E0200B080D2 /* MainViewController.swift */,
+				73734EA12BB97D0C00B080D2 /* MainViewControllerCoordinator.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		91534E0B915A0837696E6AAC /* Frameworks */ = {
@@ -250,8 +278,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73734E842BB73E0200B080D2 /* ViewController.swift in Sources */,
+				73734E9F2BB97B6A00B080D2 /* AppCoordinator.swift in Sources */,
+				73734E9D2BB97AE600B080D2 /* BaseCoordinator.swift in Sources */,
+				73734E9B2BB97A5900B080D2 /* Coordinator.swift in Sources */,
+				73734E842BB73E0200B080D2 /* MainViewController.swift in Sources */,
 				73734E802BB73E0200B080D2 /* AppDelegate.swift in Sources */,
+				73734EA22BB97D0C00B080D2 /* MainViewControllerCoordinator.swift in Sources */,
 				73734E822BB73E0200B080D2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
