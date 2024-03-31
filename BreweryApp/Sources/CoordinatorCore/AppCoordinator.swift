@@ -22,9 +22,13 @@ class AppCoordinator: BaseCoordinator {
     
     init(window: UIWindow) {
         self.window = window
+        self.window.rootViewController = navigationController
+        self.window.makeKeyAndVisible()
     }
     
     override func start() {
-        // future realization
+        let mainViewControllerCoordinator = MainViewControllerCoordinator(navigationController: navigationController)
+        add(coordinator: mainViewControllerCoordinator)
+        mainViewControllerCoordinator.start()
     }
 }
