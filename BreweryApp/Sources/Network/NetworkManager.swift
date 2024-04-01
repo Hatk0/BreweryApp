@@ -16,4 +16,10 @@ final class NetworkManager {
         components.path = "/v1/breweries"
         return components.url
     }
+    
+    private func createRequest(url: URL?) -> URLRequest? {
+        guard let url else { return nil }
+        let request = URLRequest(url: url)
+        return request
+    }
 }
