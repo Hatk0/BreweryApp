@@ -29,7 +29,9 @@ class MainViewController: UIViewController {
     // MARK: - Setup
     
     private func setupView() {
-        
+        view.backgroundColor = .systemBackground
+        title = "Brewery"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func setupHierarchy() {
