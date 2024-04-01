@@ -15,7 +15,14 @@ class MainViewController: UIViewController {
     
     // MARK: - UI
     
-    
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
     
     // MARK: - Lifecycle
 
@@ -35,11 +42,23 @@ class MainViewController: UIViewController {
     }
     
     private func setupHierarchy() {
-        
+        view.addSubview(tableView)
     }
     
     private func setupLayout() {
-        
+        tableView.frame = view.bounds
     }
 }
 
+// MARK: - Extensions
+
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        return cell
+    }
+}
