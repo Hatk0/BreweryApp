@@ -23,7 +23,7 @@ final class NetworkManager {
         return request
     }
     
-    func getData(handler: @escaping (Result<Data, BreweryError>) -> Void) {
+    private func getData(handler: @escaping (Result<Data, BreweryError>) -> Void) {
         guard let url = createURL(), let urlRequest = createRequest(url: url) else { return }
         
         let session = URLSession.shared
@@ -45,5 +45,17 @@ final class NetworkManager {
                 handler(.failure(.invalidStatusCode(response.statusCode)))
             }
         }.resume()
+    }
+    
+    static func decodeBreweryData(_ data: Data) -> [Brewery] {
+        let decoder = JSONDecoder()
+        
+        do {
+            let result = try decoder.decode([Brewery].self, from: data)
+            return result
+        } catch {
+            print(BreweryError.decodingError)
+            return []
+        }
     }
 }
