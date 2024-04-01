@@ -9,14 +9,35 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    // MARK: - Coordinator
+    
     weak var mainNavigationControllerCoordinator: MainViewControllerCoordinator?
+    
+    // MARK: - UI
+    
+    
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .red
+        setupView()
+        setupHierarchy()
+        setupLayout()
     }
 
-
+    // MARK: - Setup
+    
+    private func setupView() {
+        
+    }
+    
+    private func setupHierarchy() {
+        
+    }
+    
+    private func setupLayout() {
+        
+    }
 }
 
