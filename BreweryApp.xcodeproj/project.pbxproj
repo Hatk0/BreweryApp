@@ -78,8 +78,9 @@
 		73734E932BB73F1E00B080D2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				73734E992BB9614E00B080D2 /* CoordinatorCore */,
 				73734E952BB73F2B00B080D2 /* App */,
+				73734E992BB9614E00B080D2 /* CoordinatorCore */,
+				73734EC42BBAF30600B080D2 /* Network */,
 				73734E962BB73F2F00B080D2 /* Scenes */,
 			);
 			path = Sources;
@@ -145,6 +146,13 @@
 				73734EA12BB97D0C00B080D2 /* MainViewControllerCoordinator.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		73734EC42BBAF30600B080D2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		91534E0B915A0837696E6AAC /* Frameworks */ = {
