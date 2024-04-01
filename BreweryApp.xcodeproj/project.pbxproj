@@ -20,6 +20,7 @@
 		73734EC82BBAF38700B080D2 /* BreweryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734EC72BBAF38700B080D2 /* BreweryError.swift */; };
 		73734ECA2BBAF89300B080D2 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734EC92BBAF89300B080D2 /* Brewery.swift */; };
 		73734ECC2BBB017D00B080D2 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734ECB2BBB017D00B080D2 /* MainTableViewCell.swift */; };
+		73734ECE2BBB0B6D00B080D2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734ECD2BBB0B6D00B080D2 /* MainViewModel.swift */; };
 		8A26059CCDE8F540D00B3AED /* Pods_BreweryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98769571F2258F37F994F423 /* Pods_BreweryApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		73734EC72BBAF38700B080D2 /* BreweryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryError.swift; sourceTree = "<group>"; };
 		73734EC92BBAF89300B080D2 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
 		73734ECB2BBB017D00B080D2 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		73734ECD2BBB0B6D00B080D2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		98769571F2258F37F994F423 /* Pods_BreweryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreweryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				73734EA12BB97D0C00B080D2 /* MainViewControllerCoordinator.swift */,
+				73734ECD2BBB0B6D00B080D2 /* MainViewModel.swift */,
 				73734E832BB73E0200B080D2 /* MainViewController.swift */,
 				73734ECB2BBB017D00B080D2 /* MainTableViewCell.swift */,
 			);
@@ -309,6 +312,7 @@
 				73734EA22BB97D0C00B080D2 /* MainViewControllerCoordinator.swift in Sources */,
 				73734ECA2BBAF89300B080D2 /* Brewery.swift in Sources */,
 				73734E822BB73E0200B080D2 /* SceneDelegate.swift in Sources */,
+				73734ECE2BBB0B6D00B080D2 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

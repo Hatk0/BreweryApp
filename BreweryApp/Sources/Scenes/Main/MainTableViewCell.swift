@@ -44,4 +44,10 @@ class MainTableViewCell: UITableViewCell {
             breweryNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 12)
         ])
     }
+    
+    // MARK: - Configuration
+    
+    func configure(with brewery: Brewery?) {
+        breweryNameLabel.text = brewery?.name
+    }
 }
