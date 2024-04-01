@@ -23,7 +23,7 @@ final class NetworkManager {
         return request
     }
     
-    private func getData(handler: @escaping (Result<Data, BreweryError>) -> Void) {
+    func getData(handler: @escaping (Result<Data, BreweryError>) -> Void) {
         guard let url = createURL(), let urlRequest = createRequest(url: url) else { return }
         
         let session = URLSession.shared
