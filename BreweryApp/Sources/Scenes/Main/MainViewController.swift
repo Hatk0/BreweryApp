@@ -13,6 +13,10 @@ class MainViewController: UIViewController {
     
     weak var mainNavigationControllerCoordinator: MainViewControllerCoordinator?
     
+    // MARK: - ViewModel
+    
+    var mainViewModel: MainViewModelProtocol?
+    
     // MARK: - UI
     
     private lazy var tableView: UITableView = {
@@ -31,9 +35,29 @@ class MainViewController: UIViewController {
         setupView()
         setupHierarchy()
         setupLayout()
+        fetchBreweries()
     }
 
     // MARK: - Setup
+    
+    private func fetchBreweries() {
+        let mainViewModel = MainViewModel()
+        mainViewModel.fetchBreweries { [weak self] result in
+            switch result {
+            case .success(let breweries):
+                DispatchQueue.main.async {
+                    self?.configure(with: mainViewModel)
+                    self?.tableView.reloadData()
+                }
+            case .failure(let error):
+                print("Failed to fetch breweries: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    private func configure(with viewModel: MainViewModelProtocol) {
+        mainViewModel = viewModel
+    }
     
     private func setupView() {
         view.backgroundColor = .systemBackground
@@ -54,11 +78,14 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        mainViewModel?.breweries.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier, for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
+        
+        let brewery = mainViewModel?.breweries[indexPath.row]
+        cell.configure(with: brewery)
         return cell
     }
 }
