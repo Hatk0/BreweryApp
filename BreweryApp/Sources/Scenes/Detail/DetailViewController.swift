@@ -86,4 +86,14 @@ class DetailViewController: UIViewController {
             stack.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
+    
+    // MARK: - Configuration
+
+    func configure(with viewModel: DetailViewModel) {
+        detailViewModel = viewModel
+        nameLabel.text = viewModel.name
+        cityLabel.text = viewModel.city
+        stateLabel.text = viewModel.state
+        countryLabel.text = viewModel.country
+    }
 }
