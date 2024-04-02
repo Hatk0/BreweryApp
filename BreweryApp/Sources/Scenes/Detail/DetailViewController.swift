@@ -9,6 +9,10 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    // MARK: - Coordinator
+    
+    weak var detailNavigationControllerCoordinator: DetailViewControllerCoordinator?
+    
     // MARK: - UI
     
     // MARK: - Lifecycle
