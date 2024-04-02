@@ -17,14 +17,17 @@ class MainViewControllerCoordinator: BaseCoordinator {
     
     override func start() {
         let mainViewController = MainViewController()
-        mainViewController.mainNavigationControllerCoordinator = self
+        mainViewController.didSelectBrewery = { [weak self] brewery in
+            self?.runDetail(with: brewery)
+        }
         navigationController?.pushViewController(mainViewController, animated: true)
     }
     
-    func runDetail() {
-        let secondViewControllerCoordinator = DetailViewControllerCoordinator(navigationController: navigationController)
-        add(coordinator: secondViewControllerCoordinator)
-        secondViewControllerCoordinator.start()
+    func runDetail(with brewery: Brewery) {
+        let detailViewController = DetailViewController()
+        let detailViewModel = DetailViewModel()
+        detailViewModel.selectedBreweryItem = brewery
+        detailViewController.configure(with: detailViewModel)
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
-
