@@ -13,11 +13,14 @@ class DetailViewController: UIViewController {
     
     weak var detailNavigationControllerCoordinator: DetailViewControllerCoordinator?
     
+    // MARK: - ViewModel
+    
+    private var detailViewModel: DetailViewModel?
+    
     // MARK: - UI
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "10 Barrel Brewing Co"
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -25,7 +28,6 @@ class DetailViewController: UIViewController {
     
     private lazy var cityLabel: UILabel = {
         let label = UILabel()
-        label.text = "Bend"
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -33,7 +35,6 @@ class DetailViewController: UIViewController {
     
     private lazy var stateLabel: UILabel = {
         let label = UILabel()
-        label.text = "Oregon"
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -41,7 +42,6 @@ class DetailViewController: UIViewController {
     
     private lazy var countryLabel: UILabel = {
         let label = UILabel()
-        label.text = "United States"
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
