@@ -20,5 +20,11 @@ class MainViewControllerCoordinator: BaseCoordinator {
         mainViewController.mainNavigationControllerCoordinator = self
         navigationController?.pushViewController(mainViewController, animated: true)
     }
+    
+    func runDetail() {
+        let secondViewControllerCoordinator = DetailViewControllerCoordinator(navigationController: navigationController)
+        add(coordinator: secondViewControllerCoordinator)
+        secondViewControllerCoordinator.start()
+    }
 }
 
