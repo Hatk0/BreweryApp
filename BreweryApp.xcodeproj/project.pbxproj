@@ -21,6 +21,9 @@
 		73734ECA2BBAF89300B080D2 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734EC92BBAF89300B080D2 /* Brewery.swift */; };
 		73734ECC2BBB017D00B080D2 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734ECB2BBB017D00B080D2 /* MainTableViewCell.swift */; };
 		73734ECE2BBB0B6D00B080D2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734ECD2BBB0B6D00B080D2 /* MainViewModel.swift */; };
+		73734ED12BBB16A600B080D2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734ED02BBB16A600B080D2 /* DetailViewController.swift */; };
+		73734ED32BBBF3CF00B080D2 /* DetailViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734ED22BBBF3CF00B080D2 /* DetailViewControllerCoordinator.swift */; };
+		73734ED52BBC420800B080D2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73734ED42BBC420800B080D2 /* DetailViewModel.swift */; };
 		8A26059CCDE8F540D00B3AED /* Pods_BreweryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98769571F2258F37F994F423 /* Pods_BreweryApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		73734EC92BBAF89300B080D2 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
 		73734ECB2BBB017D00B080D2 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		73734ECD2BBB0B6D00B080D2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		73734ED02BBB16A600B080D2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		73734ED22BBBF3CF00B080D2 /* DetailViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerCoordinator.swift; sourceTree = "<group>"; };
+		73734ED42BBC420800B080D2 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		98769571F2258F37F994F423 /* Pods_BreweryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreweryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -119,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				73734EA02BB97CB200B080D2 /* Main */,
+				73734ECF2BBB169500B080D2 /* Detail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -168,6 +175,16 @@
 				73734EC52BBAF33A00B080D2 /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		73734ECF2BBB169500B080D2 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				73734ED22BBBF3CF00B080D2 /* DetailViewControllerCoordinator.swift */,
+				73734ED42BBC420800B080D2 /* DetailViewModel.swift */,
+				73734ED02BBB16A600B080D2 /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		91534E0B915A0837696E6AAC /* Frameworks */ = {
@@ -301,17 +318,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73734ED12BBB16A600B080D2 /* DetailViewController.swift in Sources */,
 				73734ECC2BBB017D00B080D2 /* MainTableViewCell.swift in Sources */,
 				73734E9F2BB97B6A00B080D2 /* AppCoordinator.swift in Sources */,
 				73734E9D2BB97AE600B080D2 /* BaseCoordinator.swift in Sources */,
 				73734EC82BBAF38700B080D2 /* BreweryError.swift in Sources */,
 				73734E9B2BB97A5900B080D2 /* Coordinator.swift in Sources */,
+				73734ED32BBBF3CF00B080D2 /* DetailViewControllerCoordinator.swift in Sources */,
 				73734E842BB73E0200B080D2 /* MainViewController.swift in Sources */,
 				73734EC62BBAF33A00B080D2 /* NetworkManager.swift in Sources */,
 				73734E802BB73E0200B080D2 /* AppDelegate.swift in Sources */,
 				73734EA22BB97D0C00B080D2 /* MainViewControllerCoordinator.swift in Sources */,
 				73734ECA2BBAF89300B080D2 /* Brewery.swift in Sources */,
 				73734E822BB73E0200B080D2 /* SceneDelegate.swift in Sources */,
+				73734ED52BBC420800B080D2 /* DetailViewModel.swift in Sources */,
 				73734ECE2BBB0B6D00B080D2 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,7 +15,6 @@ class MainTableViewCell: UITableViewCell {
     
     private lazy var breweryNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "10 Barrel Brewing Co"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

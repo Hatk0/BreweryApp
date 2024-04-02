@@ -9,13 +9,15 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    var didSelectBrewery: ((Brewery) -> Void)?
+    
     // MARK: - Coordinator
     
     weak var mainNavigationControllerCoordinator: MainViewControllerCoordinator?
     
     // MARK: - ViewModel
     
-    var mainViewModel: MainViewModelProtocol?
+    private var mainViewModel: MainViewModel?
     
     // MARK: - UI
     
@@ -41,22 +43,17 @@ class MainViewController: UIViewController {
     // MARK: - Setup
     
     private func fetchBreweries() {
-        let mainViewModel = MainViewModel()
-        mainViewModel.fetchBreweries { [weak self] result in
+        mainViewModel = MainViewModel()
+        mainViewModel?.fetchBreweries { [weak self] result in
             switch result {
-            case .success(let breweries):
+            case .success(_):
                 DispatchQueue.main.async {
-                    self?.configure(with: mainViewModel)
                     self?.tableView.reloadData()
                 }
             case .failure(let error):
                 print("Failed to fetch breweries: \(error.localizedDescription)")
             }
         }
-    }
-    
-    private func configure(with viewModel: MainViewModelProtocol) {
-        mainViewModel = viewModel
     }
     
     private func setupView() {
@@ -87,5 +84,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let brewery = mainViewModel?.breweries[indexPath.row]
         cell.configure(with: brewery)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if let brewery = mainViewModel?.breweries[indexPath.row] {
+            didSelectBrewery?(brewery)
+        }
     }
 }
