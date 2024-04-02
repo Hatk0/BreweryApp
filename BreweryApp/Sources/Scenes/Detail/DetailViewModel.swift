@@ -13,3 +13,24 @@ protocol DetailViewModelProtocol {
     var state: String { get }
     var country: String { get }
 }
+
+final class DetailViewModel: DetailViewModelProtocol {
+    
+    var selectedBreweryItem: Brewery?
+    
+    var name: String {
+        return selectedBreweryItem?.name ?? ""
+    }
+    
+    var city: String {
+        return selectedBreweryItem?.city ?? ""
+    }
+    
+    var state: String {
+        return selectedBreweryItem?.state ?? ""
+    }
+    
+    var country: String {
+        return selectedBreweryItem?.country ?? ""
+    }
+}
