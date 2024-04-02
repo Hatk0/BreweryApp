@@ -44,7 +44,7 @@ class MainViewController: UIViewController {
         let mainViewModel = MainViewModel()
         mainViewModel.fetchBreweries { [weak self] result in
             switch result {
-            case .success(let breweries):
+            case .success(_):
                 DispatchQueue.main.async {
                     self?.configure(with: mainViewModel)
                     self?.tableView.reloadData()
@@ -87,5 +87,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let brewery = mainViewModel?.breweries[indexPath.row]
         cell.configure(with: brewery)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        mainNavigationControllerCoordinator?.runDetail()
     }
 }
